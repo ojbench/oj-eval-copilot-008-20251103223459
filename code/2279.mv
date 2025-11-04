@@ -1,0 +1,12 @@
+# echo - Problem 2279
+# Read input and output the same content
+# When input ends, I returns 0
+A<I
+# Check if A is 0, if so halt
+[0]<1
+[1]<0
+B<[A]
+# If A is 0, B will be 1, else 0
+Z<B
+# Output A
+O<A

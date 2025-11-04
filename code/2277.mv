@@ -1,0 +1,19 @@
+# if else - Problem 2277
+# Read two ASCII characters and output '1' if same, '0' otherwise
+A<I
+B<I
+# Use memory trick to check equality
+# Write 0 to mem[A], then write 1 to mem[B]
+# If A==B, mem[A] will be 1, otherwise 0
+[A]<0
+[B]<1
+C<[A]
+# C is 1 if A==B, 0 otherwise
+# Output is '0' or '1' (ASCII 48 or 49)
+# Store lookup table at mem[0] and mem[1]
+[0]<48
+[1]<49
+# Load output value based on C
+D<[C]
+O<D
+Z<1

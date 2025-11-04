@@ -1,0 +1,53 @@
+# i++ - Problem 2278
+# Read '0'-'9' and output the next digit (mod 10)
+A<I
+# A is ASCII value of digit
+# If A is '9' (57), output '0' (48)
+# Otherwise output A+1
+# Check if A == 57
+[57]<48
+[58]<49
+[59]<50
+[60]<51
+[61]<52
+[62]<53
+[63]<54
+[64]<55
+[65]<56
+[66]<57
+# Use lookup: mem[A+1] contains the next char
+# But we need to handle '9' -> '0'
+# Set up memory: mem[49]='1', mem[50]='2', ..., mem[57]='0'
+[49]<49
+[50]<50
+[51]<51
+[52]<52
+[53]<53
+[54]<54
+[55]<55
+[56]<56
+[57]<48
+[48]<49
+# Wait, this approach is wrong
+# Let me reconsider
+# Input is '0'-'9' (ASCII 48-57)
+# Output should be next digit mod 10
+# '0'->49, '1'->50, ..., '8'->57, '9'->48
+# Use direct lookup table
+# mem[48] = 49 (for '0' -> '1')
+# mem[49] = 50 (for '1' -> '2')
+# ...
+# mem[57] = 48 (for '9' -> '0')
+[48]<49
+[49]<50
+[50]<51
+[51]<52
+[52]<53
+[53]<54
+[54]<55
+[55]<56
+[56]<57
+[57]<48
+B<[A]
+O<B
+Z<1
